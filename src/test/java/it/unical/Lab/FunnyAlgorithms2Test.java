@@ -6,6 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
+import org.joda.time.DateTime;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -15,12 +17,16 @@ import org.junit.Test;
 public class FunnyAlgorithms2Test 
 {
 	private static FunnyAlgorithms2 fa;
+	private static DateTime dt;
 	
 	@BeforeClass
 	public static void prepareAll() {
-		System.out.println("before class");
+		System.out.println("Inizio Test : "+dt.toDate());
 		fa=new FunnyAlgorithms2();
+		
 	}
+	@AfterClass
+	public static void afterAll(){System.out.println("Fine Test : "+dt.toDate());}
 
     @Test
     public void stringToIntConverterWork() throws Exception
@@ -55,7 +61,6 @@ public class FunnyAlgorithms2Test
     @Test
    	public void selectionSortCrescenteNotWorks() {
    		int[] array = {5,2,3,9,6};
-   	
    		int[] reverse= {9,6,5,3,2};
    		
    		assertArrayEquals(reverse, fa.selectionSort(array, 0));
