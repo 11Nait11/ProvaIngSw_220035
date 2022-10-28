@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class FunnyAlgorithms2 
+public class FunnyAlgorithms2Test 
 {
     /**
      * Rigorous Test :-)
